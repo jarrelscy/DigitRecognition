@@ -1,7 +1,7 @@
 '''
 Created on 28/06/2013
 
-@author: jarrelscy
+@author: jarrelscy justinpoh
 '''
 import numpy as np
 import Image
