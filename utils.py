@@ -7,17 +7,19 @@ import numpy as np
 import Image
 class image:
     def __init__(self, data, answer):
-        self.image =  np.reshape(np.array(data), (28,28))
+        self.dataArray =  np.reshape(np.array(data), (28,28))
         self.answer = answer
+    def returnUnfoldedArray(self):
+        return np.reshape(self.dataArray, (28*28))
     def getPixelAt(self, y, x): #note that its y then x, this is just the python way
         # the arrays look like this: 
         #  [ [0,0,1,0],
         #    [0,1,0,0],
         #    [1,0,0,0] ]
         # 
-        return self.image[y][x]
+        return self.dataArray[y][x]
     def displayImage(self):
-        Image.fromarray(self.image).show()    
+        Image.fromarray(self.dataArray).show()    
 class database:
     '''
     classdocs
